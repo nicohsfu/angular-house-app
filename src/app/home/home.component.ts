@@ -18,11 +18,12 @@ import { HousingLocation } from '../housing-location';
       </form>
     </section>
     <section class="results">
-      <app-housing-location></app-housing-location>
+      <app-housing-location [housingLocation]="housingLocation"></app-housing-location>
     </section>
   `,
   styleUrl: './home.component.css'
 })
+// on line 21 above, the syntax is -- [attribute] = "value" -- to notify Angular that the assigned value should be treated as a property from the component class (line 30-39 below) and not a string value
 export class HomeComponent {
   readonly baseUrl = 'https://angular.io/assets/images/tutorials/faa';
 
